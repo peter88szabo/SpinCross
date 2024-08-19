@@ -1,0 +1,15 @@
+"IO3neg"                                                    Fname
+"Orca"                                                      QC_inerface
+"/home/peter/Programs/Orca-5.0.3/orca"                      QC_route
+4  4000                                                     nproc, mem[MB]
+-1                                                          charge
+1  3                                                        multi(1), multi(2)
+"SCS-MP2 engrad VeryTightSCF"                               Method
+"sto-3g"                                                      Basis
+"BFGS"                                                      BBGrad1, BBGrad2, BFGS, SR1, DFP
+StepLim_ON                                                  Step Limit constraint on/off
+40                                                          maxstep of BFGS iteration
+Def_Conv_Params                                             Set new convergence threshold
+5.0E-5  2.0E-3  2.5E-3   7.0E-4   5.0E-4                    dE=5.E-5, Max[dX]=4.E-3, RMS[dX]=2.5E-3, Max[Grad]=7.E-4, RMS[Grad]=5.d-4
+
+

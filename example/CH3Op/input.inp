@@ -1,0 +1,22 @@
+"CH3Op"                                                         Header name
+"Orca"                                                          QC_inerface
+"/home/peter/Programs/Orca_5_0_3_linux_x86-64_openmpi411/orca"  QC_route
+4  4000                                                         nproc, mem[MB]
+1                                                               charge
+1  3                                                            multiplicity(1), multiplicity(2)
+"B3LYP engrad"                                                  Method (engrad flag is necessary, give before engrad the required method)
+"6-31G"                                                         Basis
+SR1                                                         BBGrad1, BBGrad2, BFGS, BFGS_old, DFP, SR1, Broyden
+StepLim_ON                                                      Step Limit constraint on/off 
+40                                                              maxstep of iteration
+Def_Conv_Params                                                 Set new convergence threshold (Def_Conv_Params or New_Conv_Params)
+5.0E-5  2.0E-3  2.5E-3   7.0E-4   5.0E-4                        dE=5.E-5, Max[dX]=4.E-3, RMS[dX]=2.5E-3, Max[Grad]=7.E-4, RMS[Grad]=5.d-4
+
+
+
+
+The last line is inactive when Def_Conv_Params is set. 
+When somebody gives New_Conv_Params then the new threshold will be read from the last line
+
+
+

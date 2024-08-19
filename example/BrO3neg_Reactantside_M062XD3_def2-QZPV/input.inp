@@ -1,0 +1,14 @@
+"BrO3neg"                                                           Fname
+"Orca"                                                              QC_inerface
+"/home/peter/Programs/Orca.5.04/orca"      QC_route
+4  4000                                                             nproc, mem[MB]
+-1                                                                  charge
+1  3                                                                multi(1), multi(2)
+"RKS M062X D3zero VeryTightSCF engrad"                              Method
+"ma-def2-QZVPP"                                                     Basis
+"BBGrad1"                                                              Opt-Method (BBGrad1, BBGrad1, BFGS, BFGS_old, DFP, SR1, Broyden)
+"StepLim_ON"                                                        StepLimit (on/off)
+50                                                                  maxstep of BFGS iteration
+default                                                             ConvPar
+
+

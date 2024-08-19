@@ -1,0 +1,41 @@
+"BrO3neg"                                                           Fname
+"Orca"                                                              QC_inerface
+"/home/peter/Programs/Orca.5.04/orca"      QC_route
+4  4000                                                             nproc, mem[MB]
+-1                                                                  charge
+1  3                                                                multi(1), multi(2)
+"RKS M062X D3zero ma-def2-TZVP VeryTightSCF"                        Method
+"ma-def2-TZVP"                                                      Basis
+""                                                                  Opt-Method
+""                                                                  StepLimit (on/off)
+30                                                                  maxstep of BFGS iteration
+default                                                             ConvPar
+
+     read(5,*) Fname
+     read(5,*) QC_interface
+     read(5,*) QC_route
+     read(5,*) nproc, mem
+     read(5,*) charge
+     read(5,*) multi(1), multi(2)
+     read(5,*) Method
+     read(5,*) Basis
+     read(5,*) OptMethod
+     read(5,*) StpLim
+     read(5,*) maxstep
+     read(5,*) ConvPar
+
+    !Threshold paramteres for convergence
+     if(trim(ConvPar) == "New_Conv_Params") then
+        read(5,*) TDE, TDXMax, TDXRMS, TGMax, TGRMS
+     else
+       !Default values same as in Gaussian (except TDE)
+
+       !energy difference
+        TDE=5.d-5
+       !max and averaged norm of step (old X --> new X) 
+        TDXMax=4.d-3; TDXRMS=2.5d-3
+       !max and averaged norm of gradient
+        TGMax=7.d-4;  TGRMS=5.d-4
+     endif
+
+
